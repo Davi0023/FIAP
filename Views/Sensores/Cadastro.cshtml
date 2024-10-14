@@ -1,0 +1,47 @@
+﻿@model Fiap.Web.Challenge.Models.ViewModels.SensoresCadastroViewModel
+
+<h1>Cadastro de Sensores</h1>
+
+<h4>Novo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Cadastro" asp-controller="Sensores">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @* <div class="form-group">
+                <label asp-for="id_sensor" class="control-label"></label>
+                <input asp-for="id_sensor" class="form-control" />
+                <span asp-validation-for="id_sensor" class="text-danger"></span>
+            </div> *@
+            <div class="form-group">
+                <label asp-for="ds_modelo" class="control-label"></label>
+                <input asp-for="ds_modelo" class="form-control" />
+                <span asp-validation-for="ds_modelo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ds_fabricante" class="control-label"></label>
+                <input asp-for="ds_fabricante" class="form-control" />
+                <span asp-validation-for="ds_fabricante" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nm_oceano" class="control-label"></label>
+                <input asp-for="nm_oceano" class="form-control" />
+                <span asp-validation-for="nm_oceano" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="id_local" class="control-label"></label>
+                <input asp-for="id_local" asp-items="@Model.Local"class="form-select" />
+                    <option value="0">Selecione</option>
+                <span asp-validation-for="id_local" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+
+    <a asp-action="Index">Voltar</a>
+
+</div>
+

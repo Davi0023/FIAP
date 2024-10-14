@@ -5,7 +5,7 @@
         public int id_orgao {  get; set; }  
         public string nm_orgao { get; set; }
         public string nr_ddi { get; set; }
-        public int nm_ddd { get; set; }
+        public int NrDdd { get; set; }
         public int nr_telefone { get; set; }    
         public string ds_email {  get; set; }
         public string ds_endereco { get; set; }

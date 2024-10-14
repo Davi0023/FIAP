@@ -1,0 +1,42 @@
+﻿@model Fiap.Web.Challenge.Models.SensoresModel
+
+<h1>Sensores</h1>
+
+<h4>Detalhes</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+
+        <div class="form-group">
+            <label asp-for="ds_modelo" class="control-label fw-bold"></label>
+            <div class="col-md-10">
+                <span>@Model.ds_fabricante</span>
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            <label asp-for="ds_fabricante" class="control-label fw-bold"></label>
+            <div class="col-md-10">
+                <span>@Model.ds_fabricante</span>
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            <label asp-for="nm_oceano" class="control-label fw-bold"></label>
+            <div class="col-md-10">
+                <span>@Model.nm_oceano</span>
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            <label asp-for="id_local" class="control-label  fw-bold"></label>
+            <div class="col-md-10">
+                <span>@Model.Local.ds_coordenadas</span>
+            </div>
+        </div>
+        <br />
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>

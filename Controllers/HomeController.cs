@@ -1,3 +1,4 @@
+using Fiap.Web.Challenge.Logging;
 using Fiap.Web.Challenge.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -6,15 +7,16 @@ namespace Fiap.Web.Challenge.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ICustomLogger _customLogger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ICustomLogger customLogger)
         {
-            _logger = logger;
+            _customLogger = customLogger;
         }
 
         public IActionResult Index()
         {
+            _customLogger.Log("Acessou a Home");
             return View();
         }
 
