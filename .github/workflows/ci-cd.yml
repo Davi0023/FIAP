@@ -51,11 +51,8 @@ jobs:
         sudo apt-get install docker-compose -y
 
     - name: List directory contents
-      run: ls -la
-
-    - name: Check Docker Compose version
-      run: docker-compose --version
+      run: ls -la $GITHUB_WORKSPACE
 
     - name: Deploy with Docker Compose
       run: |
-        docker-compose -f $GITHUB_WORKSPACE/docker-compose.yml up -d
+        docker-compose -f $GITHUB_WORKSPACE/deploy/docker-compose.yml up -d
