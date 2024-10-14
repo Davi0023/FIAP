@@ -50,9 +50,12 @@ jobs:
         sudo apt-get update
         sudo apt-get install docker-compose -y
 
-    - name: Pull the latest image
-      run: docker pull davi0023/fiap.web.challenge:latest
+    - name: List directory contents
+      run: ls -la
+
+    - name: Check Docker Compose version
+      run: docker-compose --version
 
     - name: Deploy with Docker Compose
       run: |
-        docker-compose -f C:\Users\davig\OneDrive\Aulas\Análise e Desenvolvimento de Sistemas\FIAP - Graduação\Aulas\2o Ano\Fase 6\Cap. 6\Atividade\Cap.7\CNET\Fiap.Web.Challenge\docker-compose.yml up -d
+        docker-compose -f $GITHUB_WORKSPACE/docker-compose.yml up -d
