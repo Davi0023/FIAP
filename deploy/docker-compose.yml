@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  web:
+    image: davi0023/fiap.web.challenge:latest
+    ports:
+      - "80:80"  
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

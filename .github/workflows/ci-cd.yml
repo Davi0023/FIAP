@@ -50,8 +50,8 @@ jobs:
         sudo apt-get update
         sudo apt-get install docker-compose -y
 
-    - name: List directory contents
-      run: ls -la $GITHUB_WORKSPACE
+    - name: List all files and directories
+      run: find $GITHUB_WORKSPACE -type f
 
     - name: Deploy with Docker Compose
       run: |
