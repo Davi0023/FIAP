@@ -27,7 +27,7 @@ jobs:
       with:
         context: .
         push: true
-        tags: davi0023/Fiap.Web.Challenge:latest
+        tags: davi0023/fiap.web.challenge:latest
 
   deploy:
     runs-on: ubuntu-latest
