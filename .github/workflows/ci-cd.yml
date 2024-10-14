@@ -56,4 +56,4 @@ jobs:
     - name: Deploy with Docker Compose
       run: |
         cd $GITHUB_WORKSPACE
-        docker-compose up -d
+        docker-compose -f C:\Users\davig\OneDrive\Aulas\Análise e Desenvolvimento de Sistemas\FIAP - Graduação\Aulas\2o Ano\Fase 6\Cap. 6\Atividade\Cap.7\CNET\Fiap.Web.Challenge\docker-compose.yml up -d
